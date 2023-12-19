@@ -12,17 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-FROM ubuntu:18.04
+FROM ubuntu:22.04
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y apt-utils wget gnupg2 unzip git jq \
                        apt-transport-https ca-certificates \
                        dnsutils curl gettext
 
-ENV TERRAFORM_VERSION=1.0.3
-ENV HELM_VERSION=2.14.3
-ENV KUBECTL_VERSION=1.16.1
-ENV GO_VERSION=1.14.2
+ENV TERRAFORM_VERSION=1.6.6
+ENV HELM_VERSION=3.13.3
+ENV KUBECTL_VERSION=1.26.1
+ENV GO_VERSION=1.21.5
 ENV APT_KEY_DONT_WARN_ON_DANGEROUS_USAGE=DO_NOT_WARN
 
 # Install terraform
